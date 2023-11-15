@@ -1,9 +1,13 @@
 class Vehicle {
-  String fuelType;
+  String? fuelType;
 
-  Vehicle(this.fuelType);
+  Vehicle([this.fuelType]);
 
   void refuel() {
-    print('Refueling with $fuelType');
+    if (fuelType == null) {
+      print('this vehicle does not need a fuel');
+    } else {
+      print('Refueling with $fuelType');
+    }
   }
 }
